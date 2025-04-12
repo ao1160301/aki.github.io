@@ -2,7 +2,6 @@
  问题背景：GitHub 图床的局限性
 ---
 - GitHub 图床免费且稳定，但其图片外链 raw.githubusercontent.com 经常在国内访问缓慢，甚至被墙，影响图片加载速度。
-- Cloudflare R2 对象存储图床：提供更高效的大容量图片存储和全球加速服务。
 
 ## 创建 GitHub 图床仓库
 1.登录 [GitHub](https://github.com/)
