@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>秋</title><link>https://ao1160301.github.io/aki.github.io</link><description>秋的国内笔记</description><copyright>秋</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>http://momo-1-img.ao1160301aila.workers.dev/momobako.png</url><title>avatar</title><link>https://ao1160301.github.io/aki.github.io</link></image><lastBuildDate>Sat, 12 Apr 2025 17:18:56 +0000</lastBuildDate><managingEditor>秋</managingEditor><ttl>60</ttl><webMaster>秋</webMaster><item><title>测试</title><link>https://ao1160301.github.io/aki.github.io/post/ce-shi.html</link><description>&lt;img src='https://picsum.photos/200'&gt;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>秋</title><link>https://ao1160301.github.io/aki.github.io</link><description>秋的国内笔记</description><copyright>秋</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>http://momo-1-img.ao1160301aila.workers.dev/momobako.png</url><title>avatar</title><link>https://ao1160301.github.io/aki.github.io</link></image><lastBuildDate>Sat, 12 Apr 2025 17:21:55 +0000</lastBuildDate><managingEditor>秋</managingEditor><ttl>60</ttl><webMaster>秋</webMaster><item><title>测试</title><link>https://ao1160301.github.io/aki.github.io/post/ce-shi.html</link><description>&lt;img src='https://picsum.photos/200'&gt;
 
 &lt;audio controls&gt;
   &lt;source src='https://open.spotify.com/embed/track/0U3fV7K4WFfVRgLGEAKh3g?utm_source=generator' type='audio/mpeg'&gt;
@@ -12,6 +12,8 @@
 
 
 `Gmeek-html&lt;iframe style='border-radius:12px' src='https://open.spotify.com/embed/track/0U3fV7K4WFfVRgLGEAKh3g?utm_source=generator' width='100%' height='152' frameBorder='0' allowfullscreen='' allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture' loading='lazy'&gt;&lt;/iframe&gt;`
+
+`Gmeek-html&lt;iframe src='https://music.meekdai.com/#61' width='100%' height='460px' frameborder='0' allowfullscreen='true'&gt;&lt;/iframe&gt;`
 。</description><guid isPermaLink="true">https://ao1160301.github.io/aki.github.io/post/ce-shi.html</guid><pubDate>Sat, 12 Apr 2025 17:12:17 +0000</pubDate></item><item><title>使用GitHub构建暴露在公网上的永久轻量级博客</title><link>https://ao1160301.github.io/aki.github.io/post/shi-yong-GitHub-gou-jian-bao-lu-zai-gong-wang-shang-de-yong-jiu-qing-liang-ji-bo-ke.html</link><description>[Gmeek](https://github.com/Meekdai/Gmeek)
 ---
 &gt;本项目来源于https://github.com/Meekdai/Gmeek
