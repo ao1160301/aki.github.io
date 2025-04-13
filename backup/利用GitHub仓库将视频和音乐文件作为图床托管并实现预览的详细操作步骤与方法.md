@@ -25,6 +25,7 @@
 **如果文件较大（>50MB），需使用 Git LFS：
 安装 Git LFS（参考 [Git LFS 官网](https://git-lfs.github.com/)）。**
 在本地仓库运行：
+
 ```bash
 git lfs install
 git lfs track "*.mp4"
@@ -32,9 +33,11 @@ git add .gitattributes my-video.mp4
 git commit -m "Add video with LFS"
 git push origin main
 ```
+
 创建 `HTML` 文件用于预览：
 在仓库页面，点击 `Add file `> `Create new file`。
 文件名命名为` index.html`，输入以下代码：
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -55,9 +58,11 @@ git push origin main
 ---
 
 如果使用了` Git LFS`，`src` 需要改为 `LFS` 的` Raw `链接，例如：
+
 ```html
 <source src="https://media.githubusercontent.com/media/username/media-hosting/main/my-video.mp4" type="video/mp4">
 ```
+
 点击 `Commit new file`（选择直接提交到 `main `分支）。
 启用 GitHub Pages：
 进入仓库，点击 `Settings `> 左侧菜单的` Pages`。
@@ -73,12 +78,14 @@ LFS 文件是否正确引用了` media.githubusercontent.com` 链接。
 获取视频的 Raw 链接：
 在仓库页面，点击视频文件（如 my-video.mp4）。
 点击右上角的 Raw 按钮，浏览器会跳转到类似以下链接：
+
 ```
 https://raw.githubusercontent.com/username/media-hosting/main/my-video.mp4
 ```
 
 ---
 如果使用 Git LFS，链接格式为：
+
 ```
 https://media.githubusercontent.com/media/username/media-hosting/main/my-video.mp4
 ```
@@ -89,6 +96,7 @@ https://media.githubusercontent.com/media/username/media-hosting/main/my-video.m
 浏览器（如 `Chrome、Firefox`）通常会显示内置播放器，直接播放视频。
 嵌入到其他页面（可选）：
 创建一个 `HTML` 文件（或添加到现有网页），嵌入` Raw `链接：
+
 ```html
 <video controls>
     <source src="https://raw.githubusercontent.com/username/media-hosting/main/my-video.mp4" type="video/mp4">
@@ -100,7 +108,8 @@ https://media.githubusercontent.com/media/username/media-hosting/main/my-video.m
 上传 `HTML `到` GitHub Pages` 或其他网站，即可分享预览。
 
 ## 三、音乐文件预览的详细操作步骤
-方法 1：通过 GitHub Pages 预览音乐
+
+### 方法 1：通过 GitHub Pages 预览音乐
 上传音乐文件：
 打开仓库页面，点击 Add file > Upload files。
 拖放或选择音乐文件（如 my-audio.mp3），上传后点击 Commit changes。
@@ -108,6 +117,7 @@ https://media.githubusercontent.com/media/username/media-hosting/main/my-video.m
 创建 HTML 文件用于预览：
 点击 Add file > Create new file，命名为 audio.html（或任意名称）。
 输入以下代码：
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -125,7 +135,9 @@ https://media.githubusercontent.com/media/username/media-hosting/main/my-video.m
 </body>
 </html>
 ```
+
 **如果使用 Git LFS，src 改为**：
+
 ```html
 <source src="https://media.githubusercontent.com/media/username/media-hosting/main/my-audio.mp3" type="audio/mpeg">
 ```
@@ -142,12 +154,14 @@ https://media.githubusercontent.com/media/username/media-hosting/main/my-video.m
 获取音乐的` Raw `链接：
 在仓库页面，点击音乐文件（如` my-audio.mp3`）。
 点击 Raw 按钮，获取链接：
+
 ```
 https://raw.githubusercontent.com/username/media-hosting/main/my-audio.mp3
 ```
 
 ---
 `Git LFS `文件链接：
+
 ```
 https://media.githubusercontent.com/media/username/media-hosting/main/my-audio.mp3
 ```
@@ -158,6 +172,7 @@ https://media.githubusercontent.com/media/username/media-hosting/main/my-audio.m
 浏览器会显示简单的播放界面（通常是进度条和播放/暂停按钮）。
 嵌入到其他页面（可选）：
 在 HTML 文件中嵌入：
+
 ```html
 <audio controls>
     <source src="https://raw.githubusercontent.com/username/media-hosting/main/my-audio.mp3" type="audio/mpeg">
@@ -205,9 +220,10 @@ GitHub 并非为媒体托管优化，预览体验有限。如果需要更专业�
 其他图床：
 Imgur（短视频）、Cloudinary（视频和图片）、ImageKit（轻量级）等，提供内置播放器和流式传输。
 
-```
+---
 ## 六、示例仓库结构
 完成后的仓库可能如下：
+
 ```
 media-hosting/
 ├── my-video.mp4
@@ -216,12 +232,17 @@ media-hosting/
 ├── audio.html  (音乐预览页面)
 └── README.md
 ```
+
+---
+
 README.md 可添加说明：
+
 ```markdown
-# Media Hosting
+ # Media Hosting
 - [Watch Video](https://username.github.io/media-hosting/)
 - [Listen Audio](https://username.github.io/media-hosting/audio.html)
 ```
+
 ## 七、故障排查
 
 视频/音频不播放：
@@ -261,6 +282,7 @@ README.md 可添加说明：
 如果文件较大`（>50MB）`，使用 `Git LFS`：
 安装 `Git LFS`（参考 [Git LFS 官网](https://git-lfs.github.com/)）。
 在本地仓库运行：
+
 ```bash
 git lfs install
 git lfs track "*.mp4"
@@ -268,10 +290,12 @@ git add .gitattributes video1.mp4 video2.mp4 video3.mp4
 git commit -m "Add videos with LFS"
 git push origin main
 ```
+
 创建` HTML` 文件展示多个视频：
 选项 1：单一页面展示所有视频：
 点击 `Add file > Create new file，命名为 index.html。`
 输入以下代码，嵌入多个视频：
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -303,12 +327,15 @@ git push origin main
 
 ---
 如果使用` Git LFS`，将 `src `替换为对应的` Raw `链接，例如：
+
 ```html
 <source src="https://media.githubusercontent.com/media/username/media-hosting/main/video1.mp4" type="video/mp4">
 ```
+
 点击 `Commit new file。`
 选项 2：为每个视频创建单独页面：
 为每个视频创建独立的 `HTML `文件。例如，创建 `video1.html`：
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -327,7 +354,9 @@ git push origin main
 </body>
 </html>
 ```
+
 类似地创建 **video2.html、video3.html，**并更新` index.html `作为导航页面：
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -346,6 +375,7 @@ git push origin main
 </body>
 </html>
 ```
+
 提交所有文件。
 启用`**GitHub Pages**：
 进入仓库的** Settings > Pages**。
@@ -360,20 +390,25 @@ git push origin main
 获取每个视频的 Raw 链接：
 在仓库页面，依次点击每个视频文件（如 video1.mp4、video2.mp4）。
 点击 Raw 按钮，复制链接：
+
 ```
 https://raw.githubusercontent.com/username/media-hosting/main/video1.mp4
 https://raw.githubusercontent.com/username/media-hosting/main/video2.mp4
 https://raw.githubusercontent.com/username/media-hosting/main/video3.mp4
 ```
+
 如果使用 Git LFS，链接为：
 ```
+
 https://media.githubusercontent.com/media/username/media-hosting/main/video1.mp4
 ```
+
 直接预览：
 将每个 Raw 链接粘贴到浏览器地址栏，浏览器会显示单独的播放器播放对应视频。
 可以将链接分享给他人，点击即可预览。
 嵌入到页面（可选）：
 创建一个 **HTML **文件（如** index.html**），嵌入多个` Raw `链接：
+
 ```
 html
 <!DOCTYPE html>
@@ -403,6 +438,7 @@ html
 </body>
 </html>
 ```
+
 上传到仓库并启用 **GitHub Pages**，或者嵌入到其他网站。
 批量分享：
 将所有 Raw 链接整理到一个文档或** README.md **中，例如：
@@ -418,6 +454,7 @@ html
 例如，在 `index.html `中嵌入多个音频：
 
 ---
+
 ```
 html
 <h2>Audio 1</h2>
@@ -430,12 +467,15 @@ html
     <source src="audio2.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
 </audio>
+```
+
 Raw 链接同样适用，每个音频文件可单独预览。
 ## 四、示例仓库结构
 一个支持多个视频和音乐预览的仓库可能如下：
-```
 
 ---
+
+```
 media-hosting/
 ├── videos/
 │   ├── video1.mp4
@@ -507,15 +547,19 @@ GitHub 不鼓励将仓库用作图床，过多媒体文件可能被视为滥用�
 如果需要预览大量视频或追求更好体验：
 **YouTube/Vimeo：**
 上传视频，获取嵌入代码，添加到`` GitHub Pages 或 README``：
+
 ```html
 <iframe src="https://www.youtube.com/embed/VIDEO_ID" width="560" height="315" frameborder="0" allowfullscreen></iframe>
 ```
+
 Cloudinary/ImageKit：
 专业图床，支持多个视频和音频，内置播放器，提供流式传输。
 **SoundCloud：**
 适合音频，嵌入到 `GitHub Pages：`
+
 ```html
 <iframe src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/TRACK_ID" width="100%" height="166"></iframe>
+
 ```
 ## 七、总结
 **一个 GitHub 仓库 可以预览多个视频和音乐，通过 GitHub Pages（单一页面或多页面）或 Raw 链接实现。

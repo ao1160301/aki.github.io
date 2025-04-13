@@ -172,8 +172,8 @@ LFS 文件是否正确引用了<code class="notranslate"> media.githubuserconten
 <hr>
 <p>上传 <code class="notranslate">HTML </code>到<code class="notranslate"> GitHub Pages</code> 或其他网站，即可分享预览。</p>
 <h2>三、音乐文件预览的详细操作步骤</h2>
-<p>方法 1：通过 GitHub Pages 预览音乐<br>
-上传音乐文件：<br>
+<h3>方法 1：通过 GitHub Pages 预览音乐</h3>
+<p>上传音乐文件：<br>
 打开仓库页面，点击 Add file &gt; Upload files。<br>
 拖放或选择音乐文件（如 my-audio.mp3），上传后点击 Commit changes。<br>
 如果文件较大（&gt;50MB），参考视频部分的 Git LFS 设置，替换 *.mp4 为 *.mp3。<br>
@@ -263,21 +263,21 @@ LFS 文件是否正确引用了<code class="notranslate"> media.githubuserconten
 <p>同样嵌入到<code class="notranslate">GitHub</code>项目。<br>
 其他图床：<br>
 Imgur（短视频）、Cloudinary（视频和图片）、ImageKit（轻量级）等，提供内置播放器和流式传输。</p>
-<pre class="notranslate"><code class="notranslate">## 六、示例仓库结构
-完成后的仓库可能如下：
+<hr>
+<h2>六、示例仓库结构</h2>
+<p>完成后的仓库可能如下：</p>
+<pre class="notranslate"><code class="notranslate">media-hosting/
+├── my-video.mp4
+├── my-audio.mp3
+├── index.html  (视频预览页面)
+├── audio.html  (音乐预览页面)
+└── README.md
 </code></pre>
-<p>media-hosting/<br>
-├── my-video.mp4<br>
-├── my-audio.mp3<br>
-├── index.html  (视频预览页面)<br>
-├── audio.html  (音乐预览页面)<br>
-└── README.md</p>
-<pre class="notranslate"><code class="notranslate">README.md 可添加说明：
-```markdown
-# Media Hosting
-- [Watch Video](https://username.github.io/media-hosting/)
-- [Listen Audio](https://username.github.io/media-hosting/audio.html)
-</code></pre>
+<hr>
+<p>README.md 可添加说明：</p>
+<div class="highlight highlight-text-md"><pre class="notranslate"><span class="pl-mh"> # <span class="pl-en">Media Hosting</span></span>
+<span class="pl-v">-</span> <span class="pl-s">[</span>Watch Video<span class="pl-s">]</span><span class="pl-s">(</span><span class="pl-corl">https://username.github.io/media-hosting/</span><span class="pl-s">)</span>
+<span class="pl-v">-</span> <span class="pl-s">[</span>Listen Audio<span class="pl-s">]</span><span class="pl-s">(</span><span class="pl-corl">https://username.github.io/media-hosting/audio.html</span><span class="pl-s">)</span></pre></div>
 <h2>七、故障排查</h2>
 <p>视频/音频不播放：<br>
 检查文件路径是否正确（大小写敏感）。<br>
@@ -400,7 +400,8 @@ https://raw.githubusercontent.com/username/media-hosting/main/video2.mp4
 https://raw.githubusercontent.com/username/media-hosting/main/video3.mp4
 </code></pre>
 <p>如果使用 Git LFS，链接为：</p>
-<pre class="notranslate"><code class="notranslate">https://media.githubusercontent.com/media/username/media-hosting/main/video1.mp4
+<pre class="notranslate"><code class="notranslate">
+https://media.githubusercontent.com/media/username/media-hosting/main/video1.mp4
 </code></pre>
 <p>直接预览：<br>
 将每个 Raw 链接粘贴到浏览器地址栏，浏览器会显示单独的播放器播放对应视频。<br>
@@ -458,55 +459,52 @@ https://raw.githubusercontent.com/username/media-hosting/main/video3.mp4
     &lt;source src="audio2.mp3" type="audio/mpeg"&gt;
     Your browser does not support the audio element.
 &lt;/audio&gt;
-Raw 链接同样适用，每个音频文件可单独预览。
-## 四、示例仓库结构
-一个支持多个视频和音乐预览的仓库可能如下：
+</code></pre>
+<p>Raw 链接同样适用，每个音频文件可单独预览。</p>
+<h2>四、示例仓库结构</h2>
+<p>一个支持多个视频和音乐预览的仓库可能如下：</p>
+<hr>
+<pre class="notranslate"><code class="notranslate">media-hosting/
+├── videos/
+│   ├── video1.mp4
+│   ├── video2.mp4
+│   ├── video3.mp4
+├── audios/
+│   ├── audio1.mp3
+│   ├── audio2.mp3
+├── index.html  (主页面，展示所有视频和音频)
+├── video1.html (可选，单独视频页面)
+├── video2.html
+├── video3.html
+└── README.md
 </code></pre>
 <hr>
-<p>media-hosting/<br>
-├── videos/<br>
-│   ├── video1.mp4<br>
-│   ├── video2.mp4<br>
-│   ├── video3.mp4<br>
-├── audios/<br>
-│   ├── audio1.mp3<br>
-│   ├── audio2.mp3<br>
-├── index.html  (主页面，展示所有视频和音频)<br>
-├── video1.html (可选，单独视频页面)<br>
-├── video2.html<br>
-├── video3.html<br>
-└── README.md</p>
-<pre class="notranslate"><code class="notranslate">
----
-index.html 示例：
-
-```html
-&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-    &lt;title&gt;Media Gallery&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;h1&gt;My Media Gallery&lt;/h1&gt;
-    &lt;h2&gt;Videos&lt;/h2&gt;
-    &lt;video controls width="600"&gt;
-        &lt;source src="videos/video1.mp4" type="video/mp4"&gt;
-    &lt;/video&gt;
-    &lt;video controls width="600"&gt;
-        &lt;source src="videos/video2.mp4" type="video/mp4"&gt;
-    &lt;/video&gt;
-    &lt;h2&gt;Audios&lt;/h2&gt;
-    &lt;audio controls&gt;
-        &lt;source src="audios/audio1.mp3" type="audio/mpeg"&gt;
-    &lt;/audio&gt;
-    &lt;audio controls&gt;
-        &lt;source src="audios/audio2.mp3" type="audio/mpeg"&gt;
-    &lt;/audio&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
+<p>index.html 示例：</p>
+<div class="highlight highlight-text-html-basic"><pre class="notranslate"><span class="pl-c1">&lt;!DOCTYPE html<span class="pl-kos">&gt;</span></span>
+<span class="pl-kos">&lt;</span><span class="pl-ent">html</span> <span class="pl-c1">lang</span>="<span class="pl-s">en</span>"<span class="pl-kos">&gt;</span>
+<span class="pl-kos">&lt;</span><span class="pl-ent">head</span><span class="pl-kos">&gt;</span>
+    <span class="pl-kos">&lt;</span><span class="pl-ent">meta</span> <span class="pl-c1">charset</span>="<span class="pl-s">UTF-8</span>"<span class="pl-kos">&gt;</span>
+    <span class="pl-kos">&lt;</span><span class="pl-ent">meta</span> <span class="pl-c1">name</span>="<span class="pl-s">viewport</span>" <span class="pl-c1">content</span>="<span class="pl-s">width=device-width, initial-scale=1.0</span>"<span class="pl-kos">&gt;</span>
+    <span class="pl-kos">&lt;</span><span class="pl-ent">title</span><span class="pl-kos">&gt;</span>Media Gallery<span class="pl-kos">&lt;/</span><span class="pl-ent">title</span><span class="pl-kos">&gt;</span>
+<span class="pl-kos">&lt;/</span><span class="pl-ent">head</span><span class="pl-kos">&gt;</span>
+<span class="pl-kos">&lt;</span><span class="pl-ent">body</span><span class="pl-kos">&gt;</span>
+    <span class="pl-kos">&lt;</span><span class="pl-ent">h1</span><span class="pl-kos">&gt;</span>My Media Gallery<span class="pl-kos">&lt;/</span><span class="pl-ent">h1</span><span class="pl-kos">&gt;</span>
+    <span class="pl-kos">&lt;</span><span class="pl-ent">h2</span><span class="pl-kos">&gt;</span>Videos<span class="pl-kos">&lt;/</span><span class="pl-ent">h2</span><span class="pl-kos">&gt;</span>
+    <span class="pl-kos">&lt;</span><span class="pl-ent">video</span> <span class="pl-c1">controls</span> <span class="pl-c1">width</span>="<span class="pl-s">600</span>"<span class="pl-kos">&gt;</span>
+        <span class="pl-kos">&lt;</span><span class="pl-ent">source</span> <span class="pl-c1">src</span>="<span class="pl-s">videos/video1.mp4</span>" <span class="pl-c1">type</span>="<span class="pl-s">video/mp4</span>"<span class="pl-kos">&gt;</span>
+    <span class="pl-kos">&lt;/</span><span class="pl-ent">video</span><span class="pl-kos">&gt;</span>
+    <span class="pl-kos">&lt;</span><span class="pl-ent">video</span> <span class="pl-c1">controls</span> <span class="pl-c1">width</span>="<span class="pl-s">600</span>"<span class="pl-kos">&gt;</span>
+        <span class="pl-kos">&lt;</span><span class="pl-ent">source</span> <span class="pl-c1">src</span>="<span class="pl-s">videos/video2.mp4</span>" <span class="pl-c1">type</span>="<span class="pl-s">video/mp4</span>"<span class="pl-kos">&gt;</span>
+    <span class="pl-kos">&lt;/</span><span class="pl-ent">video</span><span class="pl-kos">&gt;</span>
+    <span class="pl-kos">&lt;</span><span class="pl-ent">h2</span><span class="pl-kos">&gt;</span>Audios<span class="pl-kos">&lt;/</span><span class="pl-ent">h2</span><span class="pl-kos">&gt;</span>
+    <span class="pl-kos">&lt;</span><span class="pl-ent">audio</span> <span class="pl-c1">controls</span><span class="pl-kos">&gt;</span>
+        <span class="pl-kos">&lt;</span><span class="pl-ent">source</span> <span class="pl-c1">src</span>="<span class="pl-s">audios/audio1.mp3</span>" <span class="pl-c1">type</span>="<span class="pl-s">audio/mpeg</span>"<span class="pl-kos">&gt;</span>
+    <span class="pl-kos">&lt;/</span><span class="pl-ent">audio</span><span class="pl-kos">&gt;</span>
+    <span class="pl-kos">&lt;</span><span class="pl-ent">audio</span> <span class="pl-c1">controls</span><span class="pl-kos">&gt;</span>
+        <span class="pl-kos">&lt;</span><span class="pl-ent">source</span> <span class="pl-c1">src</span>="<span class="pl-s">audios/audio2.mp3</span>" <span class="pl-c1">type</span>="<span class="pl-s">audio/mpeg</span>"<span class="pl-kos">&gt;</span>
+    <span class="pl-kos">&lt;/</span><span class="pl-ent">audio</span><span class="pl-kos">&gt;</span>
+<span class="pl-kos">&lt;/</span><span class="pl-ent">body</span><span class="pl-kos">&gt;</span>
+<span class="pl-kos">&lt;/</span><span class="pl-ent">html</span><span class="pl-kos">&gt;</span></pre></div>
 <hr>
 <h2>五、注意事项与限制</h2>
 <p>文件大小与数量：<br>
