@@ -2,5 +2,10 @@
     "title":"秋",
     "subTitle":"秋的国内笔记",
     "avatarUrl":"http://momo-1-img.ao1160301aila.workers.dev/momobako.png",
-    "GMEEK_VERSION":"last"
+    "GMEEK_VERSION":"last",
+    "script":"<script src='https://blog.meekdai.com/Gmeek/plugins/GmeekTOC.js'></script>",
+    "allHead":"<script src='https://blog.meekdai.com/Gmeek/plugins/GmeekBSZ.js'></script>",
+    "iconList":{"music":"M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13Z"},
+    "exlink":{"music":"https://music.youtube.com/watch?v=BWXwWp-4xEY&si=svEqbOEby748m9Nc"},
+    "onePageListNum":15
 }
