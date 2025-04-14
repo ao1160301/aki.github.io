@@ -1,5 +1,109 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>秋</title><link>https://ao1160301.github.io/aki.github.io</link><description>秋的国内笔记</description><copyright>秋</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>http://momo-1-img.ao1160301aila.workers.dev/momobako.png</url><title>avatar</title><link>https://ao1160301.github.io/aki.github.io</link></image><lastBuildDate>Sun, 13 Apr 2025 10:45:47 +0000</lastBuildDate><managingEditor>秋</managingEditor><ttl>60</ttl><webMaster>秋</webMaster><item><title>利用GitHub仓库将视频和音乐文件作为图床托管并实现预览的详细操作步骤与方法</title><link>https://ao1160301.github.io/aki.github.io/post/li-yong-GitHub-cang-ku-jiang-shi-pin-he-yin-le-wen-jian-zuo-wei-tu-chuang-tuo-guan-bing-shi-xian-yu-lan-de-xiang-xi-cao-zuo-bu-zou-yu-fang-fa.html</link><description>一、准备工作
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>秋</title><link>https://ao1160301.github.io/aki.github.io</link><description>秋的国内笔记</description><copyright>秋</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>http://momo-1-img.ao1160301aila.workers.dev/momobako.png</url><title>avatar</title><link>https://ao1160301.github.io/aki.github.io</link></image><lastBuildDate>Mon, 14 Apr 2025 10:13:49 +0000</lastBuildDate><managingEditor>秋</managingEditor><ttl>60</ttl><webMaster>秋</webMaster><item><title>【GitHub】图床使用html标签,利用pages搭建影片/音频预览页</title><link>https://ao1160301.github.io/aki.github.io/post/%E3%80%90GitHub%E3%80%91-tu-chuang-shi-yong-html-biao-qian-%2C-li-yong-pages-da-jian-ying-pian---yin-pin-yu-lan-ye.html</link><description>## 预览效果图，有空再编写
+
+
+## 仓库结构（其实看我的仓库结构，还有代码就已经会了）
+
+```
+momobako22.github.io/
+├── music/
+│   ├── audio/                    # 存储 MP3 音频文件
+│   │   ├── song1.mp3
+│   │   ├── song2.mp3
+│   │   └── ...                   # 其他音频文件
+│   ├── images/                   # 存储图片文件（如封面）
+│   │   ├── song1-cover.jpg
+│   │   ├── song2-cover.jpg
+│   │   └── ...                   # 其他图片文件
+│   ├── index.html                # 主页（可选，用于导航）
+│   ├── songs.html                # 歌曲总览页面（已存在）
+│   ├── song1.html                # 单曲页面（已提供）
+│   ├── multi-songs.html          # 新增的多曲预览页面
+│   └── styles/                   # 存储 CSS 文件（可选，用于统一样式）
+│       └── main.css
+├── README.md                     # 仓库说明文件
+└── .gitignore                    # Git 忽略文件
+```
+
+
+## 代码展示；`multi-songs.html`
+---
+
+```
+&lt;!DOCTYPE html&gt;
+&lt;html lang='zh-CN'&gt;
+&lt;head&gt;
+    &lt;meta charset='UTF-8'&gt;
+    &lt;meta name='viewport' content='width=device-width, initial-scale=1.0'&gt;
+    &lt;title&gt;多首歌曲预览&lt;/title&gt;
+    &lt;style&gt;
+        body {
+            font-family: Arial, 'Microsoft YaHei', sans-serif;
+            margin: 40px;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .song-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .song-card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+        }
+        .song-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        .song-card h2 {
+            font-size: 1.2em;
+            color: #333;
+            margin: 10px 0;
+        }
+        .song-card p {
+            font-size: 0.9em;
+            color: #666;
+            margin: 5px 0;
+        }
+        audio {
+            width: 100%;
+            margin: 10px 0;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 600px) {
+            .song-card {
+                width: 100%;
+            }
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;多首歌曲预览&lt;/h1&gt;
+    &lt;div class='song-container'&gt;
+        &lt;!-- 歌曲 1 --&gt;
+        &lt;div class='song-card'&gt;
+            &lt;img src='images/song1-cover.jpg' alt='歌曲 1 封面' onerror='this.style.display='none''&gt;
+            &lt;h2&gt;歌曲标题 1&lt;/h2&gt;
+            &lt;p&gt;&lt;strong&gt;简介：&lt;/strong&gt; 这是一首充满情感的歌曲，适合放松心情。</description><guid isPermaLink="true">https://ao1160301.github.io/aki.github.io/post/%E3%80%90GitHub%E3%80%91-tu-chuang-shi-yong-html-biao-qian-%2C-li-yong-pages-da-jian-ying-pian---yin-pin-yu-lan-ye.html</guid><pubDate>Mon, 14 Apr 2025 10:13:21 +0000</pubDate></item><item><title>利用GitHub仓库将视频和音乐文件作为图床托管并实现预览的详细操作步骤与方法</title><link>https://ao1160301.github.io/aki.github.io/post/li-yong-GitHub-cang-ku-jiang-shi-pin-he-yin-le-wen-jian-zuo-wei-tu-chuang-tuo-guan-bing-shi-xian-yu-lan-de-xiang-xi-cao-zuo-bu-zou-yu-fang-fa.html</link><description>一、准备工作
 ---
 创建 `GitHub`账户和仓库：
 如果没有 **GitHub **账户，访问 [github.com](https://github.com/) 注册。</description><guid isPermaLink="true">https://ao1160301.github.io/aki.github.io/post/li-yong-GitHub-cang-ku-jiang-shi-pin-he-yin-le-wen-jian-zuo-wei-tu-chuang-tuo-guan-bing-shi-xian-yu-lan-de-xiang-xi-cao-zuo-bu-zou-yu-fang-fa.html</guid><pubDate>Sat, 12 Apr 2025 18:07:00 +0000</pubDate></item><item><title>使用GitHub构建暴露在公网上的永久轻量级博客</title><link>https://ao1160301.github.io/aki.github.io/post/shi-yong-GitHub-gou-jian-bao-lu-zai-gong-wang-shang-de-yong-jiu-qing-liang-ji-bo-ke.html</link><description>[Gmeek](https://github.com/Meekdai/Gmeek)
