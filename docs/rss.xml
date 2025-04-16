@@ -1,5 +1,20 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>秋</title><link>https://ao1160301.github.io/aki.github.io</link><description>秋的国内笔记</description><copyright>秋</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>http://momo-1-img.ao1160301aila.workers.dev/momobako.png</url><title>avatar</title><link>https://ao1160301.github.io/aki.github.io</link></image><lastBuildDate>Mon, 14 Apr 2025 10:13:49 +0000</lastBuildDate><managingEditor>秋</managingEditor><ttl>60</ttl><webMaster>秋</webMaster><item><title>【GitHub】图床使用html标签,利用pages搭建影片/音频预览页</title><link>https://ao1160301.github.io/aki.github.io/post/%E3%80%90GitHub%E3%80%91-tu-chuang-shi-yong-html-biao-qian-%2C-li-yong-pages-da-jian-ying-pian---yin-pin-yu-lan-ye.html</link><description>## 预览效果图，有空再编写
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>秋</title><link>https://ao1160301.github.io/aki.github.io</link><description>秋的国内笔记</description><copyright>秋</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>http://momo-1-img.ao1160301aila.workers.dev/momobako.png</url><title>avatar</title><link>https://ao1160301.github.io/aki.github.io</link></image><lastBuildDate>Wed, 16 Apr 2025 17:33:52 +0000</lastBuildDate><managingEditor>秋</managingEditor><ttl>60</ttl><webMaster>秋</webMaster><item><title>GitHub图床上传文件25MB限制解决方法</title><link>https://ao1160301.github.io/aki.github.io/post/GitHub-tu-chuang-shang-chuan-wen-jian-25MB-xian-zhi-jie-jue-fang-fa.html</link><description>## 问题
+&gt; **[!上传大于25MB文件]**
+&gt;**在使用GitHub仓库时都会遇到文件太大无法上传的问题；****`Yowza, that’s a big file. Try again with a file smaller than 25MB.`**
+
+![](http://momo-1-img.ao1160301aila.workers.dev/20250417010600607.png)
+
+## 准备工作
+- 下载[GitHub Desktop](https://desktop.github.com/download/)`可以上传0~100MB上限的文件`
+   - **找到适合设备的版本下载安装即可**
+   -  **如果访问不了可以在微软商店可以下载/Linux也一样**
+      - 汉化工具[下载](http://momo-1-img.ao1160301aila.workers.dev/GithubDesktop.7z)
+- 下载[Git LFS](https://github.com/git-lfs/git-lfs/releases/download/v3.6.1/git-lfs-windows-v3.6.1.exe)`可以上传100MB以上的文件`
+   - **直接安装就行**
+***
+
+## `不写了懒，看A片去了，有空再写`。</description><guid isPermaLink="true">https://ao1160301.github.io/aki.github.io/post/GitHub-tu-chuang-shang-chuan-wen-jian-25MB-xian-zhi-jie-jue-fang-fa.html</guid><pubDate>Wed, 16 Apr 2025 17:32:28 +0000</pubDate></item><item><title>【GitHub】图床使用html标签,利用pages搭建影片/音频预览页</title><link>https://ao1160301.github.io/aki.github.io/post/%E3%80%90GitHub%E3%80%91-tu-chuang-shi-yong-html-biao-qian-%2C-li-yong-pages-da-jian-ying-pian---yin-pin-yu-lan-ye.html</link><description>## 预览效果图，有空再编写
 
 
 ## 仓库结构（其实看我的仓库结构，还有代码就已经会了）
